@@ -13,6 +13,7 @@ services:
 
     volumes:
       - .:/app
+      - media_data:/app/cinema_media
 
     depends_on:
       - cinema_db
@@ -30,7 +31,6 @@ services:
     
     volumes:
       - cinema_db_data:/var/lib/postgresql/data
-      - media_data:/app/cinema_media
 
 volumes:
   cinema_db_data:
