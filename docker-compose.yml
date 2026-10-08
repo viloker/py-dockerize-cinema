@@ -1,5 +1,5 @@
 services:
-  cinema:
+  app:
     build: .
     env_file:
       - .env
@@ -30,6 +30,8 @@ services:
     
     volumes:
       - cinema_db_data:/var/lib/postgresql/data
+      - media_data:/app/cinema_media
 
 volumes:
   cinema_db_data:
+  media_data:
